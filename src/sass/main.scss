@@ -1,0 +1,1039 @@
+@use "resetCSS" as *;
+@use "colors" as *;
+@use "components" as *;
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+// NAVIGATION
+
+.nav-top {
+	height: fit-content;
+	display: none;
+	background-color: $primary-yellow;
+
+	img {
+		height: 3rem;
+	}
+}
+
+.nav-bottom {
+	position: relative;
+	height: fit-content;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 0px 3px 6px $shadow;
+	z-index: 100;
+
+	&__logo {
+		height: 4.5rem;
+	}
+
+	&__items {
+		display: none;
+	}
+}
+
+.burger-btn {
+	padding: 1.5em;
+
+	&__box {
+		height: 2rem;
+		width: 3rem;
+		position: relative;
+	}
+
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		content: "";
+		position: absolute;
+		right: 0;
+		width: 100%;
+		height: 3px;
+		background-color: $primary-orange;
+	}
+
+	&__bars::after {
+		top: 1rem;
+	}
+
+	&__bars::before {
+		top: 2rem;
+	}
+}
+
+// HEADER
+.header {
+	height: fit-content;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	gap: 3em;
+	text-align: center;
+	background-image: url("../img/piesek.png");
+	background-position: 20% 10%;
+
+	&__heading {
+		width: 80%;
+		font-family: "Sedgwick Ave Display", cursive;
+		font-weight: lighter;
+		font-size: 3.8rem;
+		color: $stronger-yellow;
+		text-shadow: 0 0 6px $shadow;
+	}
+
+	&__text {
+		font-size: 1.1rem;
+		color: $pure-white;
+
+		span {
+			font-size: 2rem;
+			font-weight: 300;
+		}
+	}
+
+	&__button-box {
+		width: 100%;
+		margin-bottom: 0.8em;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__cta-button {
+		width: 80%;
+		height: 4.8rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2.4rem;
+		font-weight: 700;
+		color: $pure-white;
+		background: $cta-gradient;
+		background-color: $stronger-yellow;
+		border-radius: 40px;
+		box-shadow: 0 3px 6px $shadow;
+		transition: color 0.2s;
+
+		&:hover {
+			color: $pure-black;
+		}
+	}
+}
+
+// OFFER SECTION
+.offer {
+	position: relative;
+	text-align: center;
+	background-color: $primary-yellow;
+	overflow-y: visible;
+
+	&__text {
+		font-size: 1.7rem;
+	}
+
+	&__items {
+		margin: 2em 0;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		gap: 2em;
+	}
+
+	&__item {
+		max-width: 14rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: scale 0.3s;
+
+		&:hover {
+			scale: 1.03;
+			cursor: pointer;
+		}
+
+		&:hover &--text {
+			color: $primary-orange;
+		}
+
+		&--img {
+			position: relative;
+			height: 14rem;
+			width: 14rem;
+			margin-bottom: 2em;
+			border-radius: 50%;
+			border: 5px solid #ffffff;
+			box-shadow: 0px 3px 6px #00000029;
+			overflow: hidden;
+
+			.offer-img {
+				position: absolute;
+				left: -25px;
+				height: 100%;
+			}
+
+			.last-img {
+				position: absolute;
+				left: 0;
+			}
+		}
+
+		&--text {
+			font-size: 1.7rem;
+			transition: color 0.3s;
+		}
+	}
+
+	&__white-bar-left,
+	&__white-bar-right {
+		position: absolute;
+		bottom: 0;
+		height: 15%;
+		width: 50%;
+		background-color: $pure-white;
+	}
+
+	&__white-bar-left {
+		left: 0;
+		clip-path: polygon(100% 100%, 0 100%, 0 65%);
+	}
+
+	&__white-bar-right {
+		right: 0;
+		clip-path: polygon(100% 65%, 0 100%, 100% 100%);
+	}
+}
+
+// ABOUT ME SECTION
+.about-me {
+	&__images {
+		position: relative;
+		margin: 3em 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&--second {
+			display: none;
+		}
+	}
+
+	&__img {
+		min-height: 21rem;
+		min-width: 30rem;
+		width: 100%;
+		border: 5px solid $pure-white;
+		box-shadow: 0px 3px 6px $shadow;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+	}
+
+	&__button {
+		margin-bottom: 0;
+	}
+}
+
+// FB SECTION
+.fb {
+	overflow: hidden;
+
+	&__images {
+		margin-bottom: 2em;
+		display: flex;
+		gap: 2em;
+		justify-content: center;
+		text-align: center;
+	}
+	&__image {
+		width: 20rem;
+		height: 20rem;
+		border: 1px solid $primary-grey;
+	}
+
+	&__dots {
+		height: fit-content;
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+
+		.active-dot {
+			background-color: $primary-orange;
+		}
+	}
+
+	&__dot {
+		width: 1.7rem;
+		height: 1.7rem;
+		background-color: $stronger-yellow;
+		border-radius: 50%;
+		transition: background-color 0.5s;
+
+		&:hover {
+			background-color: $primary-orange;
+			cursor: pointer;
+		}
+	}
+}
+
+// MAP
+.map {
+	overflow: hidden;
+
+	&__heading {
+		margin: 1em 1.2em;
+	}
+
+	&__item {
+		width: 100%;
+		height: 40rem;
+	}
+}
+
+// FOOTER
+.footer {
+	background-color: $primary-yellow;
+
+	.footer-logo {
+		width: 100%;
+	}
+
+	&__desktop {
+		display: none;
+	}
+
+	&__mobile {
+		width: 100%;
+		margin-bottom: 4em;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 1.5em;
+
+		&--logo {
+			width: 14.8rem;
+			margin-bottom: 1em;
+			align-self: center;
+		}
+	}
+
+	&__mobile-item {
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		&--icon {
+			width: 3rem;
+			height: 3rem;
+			margin-right: 4rem;
+			text-align: center;
+		}
+
+		&--text {
+			font-size: 1.8rem;
+			line-height: 1.4em;
+		}
+
+		.text-small {
+			margin-top: 1em;
+			font-size: 1.4rem;
+		}
+
+		.local-icon {
+			align-self: start;
+		}
+
+		.fb-icon {
+			height: 4rem;
+			width: 4rem;
+			margin-right: 3rem;
+		}
+
+		.fb-text {
+			font-size: 2.4rem;
+		}
+	}
+
+	&__copy {
+		padding-top: 2em;
+		text-align: center;
+		font-size: 1.2rem;
+		border-top: 2px solid $pure-black;
+
+		a {
+			transition: color 0.3s;
+		}
+
+		a:hover {
+			color: $primary-orange;
+		}
+	}
+}
+
+// MEDIA
+@media (min-width: 576px) {
+	.nav-bottom {
+		padding: 2em 0;
+
+		&__logo {
+			height: 5.5rem;
+		}
+	}
+
+	.burger-btn {
+		&__box {
+			height: 3rem;
+			width: 4rem;
+		}
+
+		&__bars::after {
+			top: 1.5rem;
+		}
+
+		&__bars::before {
+			top: 3rem;
+		}
+	}
+
+	.header {
+		&__heading {
+			font-size: 4.6rem;
+		}
+
+		&__text {
+			width: 80%;
+			font-size: 1.4rem;
+
+			span {
+				font-size: 2.4rem;
+			}
+		}
+
+		&__cta-button {
+			width: 60%;
+			height: 5rem;
+			font-size: 3rem;
+		}
+	}
+
+	.offer {
+		&__text {
+			font-size: 1.9rem;
+		}
+
+		&__items {
+			margin: 2.6em 0;
+			column-gap: 0;
+			row-gap: 2.4em;
+		}
+
+		&__item {
+			max-width: 18rem;
+			padding: 0 12em;
+
+			&--img {
+				height: 18rem;
+				width: 18rem;
+			}
+
+			&--text {
+				font-size: 1.9rem;
+			}
+		}
+	}
+
+	.about-me {
+		&__content {
+			margin: 4em 0 0 0;
+		}
+
+		&__img {
+			width: 90%;
+		}
+	}
+
+	.footer {
+		&__mobile {
+			align-items: center;
+
+			&--logo {
+				width: 18rem;
+				margin-bottom: 1.8em;
+			}
+		}
+
+		&__mobile-item {
+			width: 32rem;
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav-top {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		&__items {
+			width: fit-content;
+			display: flex;
+			gap: 2em;
+		}
+
+		&__item {
+			padding: 0.5em 0.5em 0.5em 0.5em;
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+			font-size: 1.2rem;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $primary-orange;
+			}
+		}
+	}
+
+	.nav-bottom {
+		padding: 1.8em 0;
+		display: flex;
+		justify-content: space-around;
+
+		&__logo {
+			height: 6.2rem;
+		}
+
+		&__items {
+			display: flex;
+			align-items: center;
+			gap: 3em;
+		}
+
+		&__item {
+			font-size: 1.8rem;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $primary-orange;
+			}
+		}
+	}
+
+	.burger-btn {
+		display: none;
+	}
+
+	.header {
+		background-position: 0 50%;
+		background-size: cover;
+		align-items: start;
+
+		&__heading {
+			text-align-last: center;
+			width: 50%;
+			font-size: 5.4rem;
+		}
+
+		&__text {
+			width: 50%;
+			font-size: 1.2rem;
+
+			span {
+				font-size: 2rem;
+			}
+		}
+
+		&__button-box {
+			width: 50%;
+			padding: 0 4em;
+		}
+
+		&__cta-button {
+			width: 70%;
+			height: 4.4rem;
+			font-size: 2.2rem;
+		}
+	}
+
+	.offer {
+		br {
+			display: none;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+
+		&__items {
+			margin: 2.8em 0;
+		}
+
+		&__item {
+			padding: 0;
+			max-width: 16rem;
+
+			&--img {
+				height: 16rem;
+				width: 16rem;
+			}
+
+			&--text {
+				font-size: 2.2rem;
+			}
+		}
+
+		&__button {
+			margin-top: 1em;
+		}
+
+		&__white-bar-left,
+		&__white-bar-right {
+			height: 35%;
+		}
+
+		&__white-bar-left {
+			left: 0;
+			clip-path: polygon(100% 100%, 0 100%, 0 65%);
+		}
+
+		&__white-bar-right {
+			right: 0;
+			clip-path: polygon(100% 65%, 0 100%, 100% 100%);
+		}
+	}
+
+	.about-me {
+		&__content {
+			margin: 5em 0 0 0;
+		}
+
+		&__img {
+			width: 80%;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+
+	.fb {
+		&__images {
+			margin-bottom: 3em;
+			gap: 2.5em;
+		}
+		&__image {
+			width: 24rem;
+			height: 24rem;
+		}
+	}
+
+	.footer {
+		&__mobile {
+			display: none;
+		}
+
+		&__desktop {
+			width: 100%;
+			margin-bottom: 4em;
+			padding-top: 2em;
+			display: flex;
+			justify-content: center;
+			align-items: start;
+			gap: 1.5em;
+
+			&--logo {
+				width: 14rem;
+			}
+		}
+
+		&__desktop-block {
+			width: 25%;
+			padding: 0 1em;
+		}
+
+		&__desktop-header {
+			font-size: 2rem;
+			font-weight: 300;
+		}
+
+		&__desktop-item {
+			margin: 1em 0;
+			display: flex;
+			align-items: center;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $primary-orange;
+			}
+
+			&--icon,
+			.fb-icon {
+				width: 3em;
+				height: 3em;
+				margin-right: 1em;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			&--text,
+			.fb-text {
+				font-size: 1.4rem;
+			}
+
+			.text-small {
+				margin-top: 1em;
+				font-size: 1.2rem;
+			}
+
+			.local-icon {
+				align-self: start;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav-top {
+		padding: 0.5em 5em;
+		justify-content: flex-end;
+
+		&__items {
+			gap: 2.5em;
+		}
+
+		&__item {
+			gap: 0.8em;
+		}
+
+		:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.nav-bottom {
+		padding: 1.8em 5em;
+		display: flex;
+		justify-content: space-between;
+
+		&__logo {
+			height: 6.2rem;
+		}
+
+		&__items {
+			gap: 3em;
+		}
+
+		&__item {
+			font-size: 1.8rem;
+		}
+	}
+
+	.header {
+		background-position: 0 40%;
+
+		&__heading {
+			font-size: 5.8rem;
+		}
+
+		&__text {
+			font-size: 1.4rem;
+
+			span {
+				font-size: 2.2rem;
+			}
+		}
+	}
+
+	.offer {
+		&__items {
+			margin: 3.2em 0;
+		}
+
+		&--text {
+			font-size: 2.1rem;
+		}
+	}
+
+	.about-me {
+		&__content {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__images {
+			width: 50%;
+			height: 100%;
+			margin-top: 0;
+			margin-bottom: 0;
+			justify-content: start;
+			align-items: flex-start;
+
+			&--second {
+				position: absolute;
+				left: 10%;
+				top: 15%;
+				display: block;
+				z-index: -10;
+			}
+		}
+
+		&__img {
+			width: 90%;
+		}
+
+		&__description {
+			width: 45%;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+
+		&__button {
+			margin: 1.4em 0 0 0;
+		}
+	}
+
+	.fb {
+		&__images {
+			margin-bottom: 3.4em;
+			gap: 2.8em;
+		}
+		&__image {
+			width: 26rem;
+			height: 26rem;
+		}
+	}
+
+	.footer {
+		&__desktop {
+			justify-content: space-around;
+
+			&--logo {
+				width: 18rem;
+			}
+		}
+
+		&__desktop-block {
+			width: fit-content;
+		}
+
+		&__desktop-header {
+			margin-bottom: 0.8em;
+			font-size: 2.4rem;
+		}
+
+		&__desktop-item {
+			display: flex;
+			align-items: center;
+
+			&--icon,
+			.fb-icon {
+				width: 3.4rem;
+				height: 3.4rem;
+			}
+
+			&--text,
+			.fb-text {
+				font-size: 1.6rem;
+			}
+
+			.text-small {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.header {
+		background-position: 0 30%;
+
+		&__heading {
+			font-size: 9rem;
+		}
+
+		&__text {
+			font-size: 2rem;
+
+			span {
+				font-size: 4rem;
+			}
+
+			br {
+				display: none;
+			}
+		}
+
+		&__cta-button {
+			max-width: 38rem;
+			height: 8rem;
+			font-size: 4rem;
+		}
+	}
+
+	.offer {
+		&__text {
+			font-size: 2.4rem;
+		}
+
+		&__items {
+			margin: 2.8em 0;
+		}
+
+		&__item {
+			padding: 0;
+			max-width: 23rem;
+
+			&--img {
+				height: 23rem;
+				width: 23rem;
+			}
+
+			&--text {
+				font-size: 2.4rem;
+			}
+		}
+
+		&__button {
+			margin-top: 3em;
+		}
+	}
+
+	.about-me {
+		&__images {
+			width: 65%;
+
+			&--second {
+				position: absolute;
+				left: 10%;
+				display: block;
+				z-index: -10;
+			}
+		}
+
+		&__img {
+			width: 85%;
+			max-width: 85rem;
+		}
+
+		&__description {
+			width: 45%;
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			justify-content: space-between;
+		}
+
+		&__text {
+			font-size: 2.4rem;
+		}
+	}
+
+	.fb {
+		&__images {
+			gap: 3em;
+		}
+		&__image {
+			width: 30rem;
+			height: 30rem;
+		}
+	}
+
+	.footer {
+		&__desktop {
+			&--logo {
+				width: 20rem;
+			}
+		}
+
+		&__desktop-header {
+			font-size: 3rem;
+		}
+
+		&__desktop-item {
+			&--icon,
+			.fb-icon {
+				width: 3.8rem;
+				height: 3.8rem;
+				margin-right: 2em;
+			}
+
+			&--text,
+			.fb-text {
+				font-size: 2rem;
+			}
+
+			.text-small {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.header {
+		height: 68rem;
+		background-position: 0 40%;
+	}
+
+	.about-me {
+		&__images {
+			width: 50%;
+		}
+	}
+}
+
+@media (min-width: 1600px) {
+	.about-me {
+		&__content {
+			margin-bottom: 7rem;
+		}
+	}
+
+	.fb {
+		&__image {
+			width: 40rem;
+			height: 40rem;
+		}
+	}
+
+	.footer {
+		&__desktop {
+			&--logo {
+				width: 21rem;
+			}
+		}
+
+		&__desktop-header {
+			font-size: 4rem;
+		}
+
+		&__desktop-item {
+			margin-bottom: 2em;
+
+			&--text,
+			.fb-text {
+				font-size: 2.4rem;
+			}
+
+			.text-small {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
