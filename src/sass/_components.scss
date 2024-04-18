@@ -3,9 +3,12 @@
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1920px;
+	max-width: 2200px;
 }
 
+.active-page {
+	color: $primary-orange;
+}
 .text-bold {
 	font-weight: 700;
 }
@@ -74,5 +77,25 @@
 @media (min-width: 1200px) {
 	.section-heading {
 		font-size: 4rem;
+	}
+}
+
+@media (min-width: 1600px) {
+	.section {
+		padding: 3em 12em;
+	}
+
+	.section-heading {
+		padding-left: 12em;
+		padding-right: 12em;
+	}
+}
+
+@keyframes showMobileNav {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
 	}
 }

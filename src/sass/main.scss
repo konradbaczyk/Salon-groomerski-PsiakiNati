@@ -19,13 +19,15 @@ body {
 }
 
 .nav-bottom {
-	position: relative;
+	position: fixed;
 	height: fit-content;
 	padding-top: 1em;
 	padding-bottom: 1em;
+	transform: translateY(-100%);
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	background-color: $pure-white;
 	box-shadow: 0px 3px 6px $shadow;
 	z-index: 100;
 
@@ -34,7 +36,32 @@ body {
 	}
 
 	&__items {
-		display: none;
+		position: absolute;
+		top: 82px;
+		left: 0;
+		width: 100%;
+		transform: translateY(-145%);
+		display: flex;
+		flex-direction: column;
+		font-size: 1.8rem;
+		background-color: $pure-white;
+		box-shadow: 0px 3px 6px $shadow;
+		transition: transform 1s, opacity 1s;
+		opacity: 0;
+		z-index: -100;
+
+		&--active {
+			transform: translateY(0%);
+			opacity: 1;
+			z-index: 100;
+		}
+	}
+
+	&__item {
+		margin: 1em 3em;
+		padding: 1em;
+		text-align: center;
+		border-bottom: 1px solid $primary-orange;
 	}
 }
 
@@ -70,6 +97,7 @@ body {
 // HEADER
 .header {
 	height: fit-content;
+	margin-top: 82px;
 	padding-top: 4em;
 	padding-bottom: 4em;
 	display: flex;
@@ -391,6 +419,12 @@ body {
 		&__logo {
 			height: 5.5rem;
 		}
+
+		&__items {
+			&--active {
+				transform: translateY(5%);
+			}
+		}
 	}
 
 	.burger-btn {
@@ -409,6 +443,8 @@ body {
 	}
 
 	.header {
+		margin-top: 112px;
+
 		&__heading {
 			font-size: 4.6rem;
 		}
@@ -484,6 +520,12 @@ body {
 }
 
 @media (min-width: 768px) {
+	.navigation {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+
 	.nav-top {
 		width: 100%;
 		display: flex;
@@ -510,23 +552,35 @@ body {
 	}
 
 	.nav-bottom {
+		margin: 0 auto;
+		transform: translateY(0);
 		padding: 1.8em 0;
 		display: flex;
 		justify-content: space-around;
+		align-self: center;
 
 		&__logo {
 			height: 6.2rem;
 		}
 
 		&__items {
+			position: static;
+			width: fit-content;
+			transform: translateY(0);
 			display: flex;
-			align-items: center;
-			gap: 3em;
+			flex-direction: row;
+			gap: 2em;
+			font-size: 1.8rem;
+			box-shadow: none;
+			opacity: 1;
+			z-index: 100;
 		}
 
 		&__item {
+			margin: 0;
 			font-size: 1.8rem;
 			transition: color 0.3s;
+			border-bottom: none;
 
 			&:hover {
 				color: $primary-orange;
@@ -539,6 +593,7 @@ body {
 	}
 
 	.header {
+		margin-top: 101px;
 		background-position: 0 50%;
 		background-size: cover;
 		align-items: start;
@@ -739,6 +794,10 @@ body {
 
 		&__items {
 			gap: 3em;
+
+			:last-child {
+				padding-right: 0;
+			}
 		}
 
 		&__item {
@@ -1003,6 +1062,12 @@ body {
 }
 
 @media (min-width: 1600px) {
+	.nav-top,
+	.nav-bottom {
+		padding-left: 12em;
+		padding-right: 12em;
+	}
+
 	.about-me {
 		&__content {
 			margin-bottom: 7rem;
@@ -1013,6 +1078,13 @@ body {
 		&__image {
 			width: 40rem;
 			height: 40rem;
+		}
+	}
+
+	.map {
+		&__heading {
+			margin-left: 3em;
+			margin-right: 3em;
 		}
 	}
 

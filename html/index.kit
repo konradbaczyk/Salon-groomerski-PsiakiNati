@@ -8,39 +8,17 @@
 			name="description"
 			content="Oferuję kompleksowe usługi w zakresie pielęgnacji psów. Strzyżenie, kąpiel, obcinanie pazurków, trymowanie. Wszystko czego potrzeba czworonogom." />
 		<title>Salon groomerski Psiaki Nati</title>
-		<link rel="icon" type="image/x-icon" href="src/img/Favicon.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="dist/css/main.min.css" />
+		<!-- @include styles.kit -->
 	</head>
 	<body>
-		<nav class="navigation">
-			<div class="nav-top wrapper">
-				<div class="nav-top__items">
-					<a href="#" class="nav-top__item"
-						><img src="src/img/Ikona (lokacja).svg" alt="Lokalizacja" />
-						<p><span class="text-bold">Salon groomerski Psiaki Nati </span>ul. Codzienna 2, 93-323 Łódź</p>
-					</a>
-
-					<a href="tel:734 196 066" class="nav-top__item text-bold"
-						><img src="src/img/Ikona (telefon).svg" alt="Telefon" />
-						<p>734 196 066</p></a
-					>
-
-					<a href="#" class="nav-top__item"
-						><img src="src/img/Ikona (zegar).svg" alt="Dni i godziny otwarcia" />
-						<p>Poniedziałek - piątek 8:00 - 16:00</p></a
-					>
-				</div>
-			</div>
+		<nav class="navigation wrapper">
+			<!-- @include nav-top.kit -->
 			<div class="nav-bottom wrapper">
 				<a href="#"><img src="src/img/Logo Psiaki-Nati.svg" alt="Logo salonu PsiakiNati" class="nav-bottom__logo" /></a>
 				<div class="nav-bottom__items">
-					<a href="#" class="nav-bottom__item">Oferta i cennik</a>
-					<a href="#" class="nav-bottom__item">Realizacje</a>
-					<a href="#" class="nav-bottom__item">Kontakt</a>
+					<a href="offer.html" class="nav-bottom__item">Oferta salonu</a>
+					<a href="gallery.html" class="nav-bottom__item">Realizacje</a>
+					<a href="contact.html" class="nav-bottom__item">Kontakt</a>
 				</div>
 
 				<button class="burger-btn">
@@ -195,86 +173,7 @@
 			</section>
 		</main>
 
-		<footer class="footer section wrapper">
-			<div class="footer__mobile">
-				<a href="#" class="footer__mobile--logo"
-					><img src="src/img/Logo Psiaki-Nati (kwadrat).svg" alt="Logo salonu PsiakiNati" class="footer-logo"
-				/></a>
-
-				<a href="tel:734 196 066" class="footer__mobile-item">
-					<div class="footer__mobile-item--icon">
-						<img src="src/img/Ikona (telefon).svg" alt="Telefon" />
-					</div>
-					<p href="tel:734 196 066" class="footer__mobile-item--text text-bold">734 196 066</p>
-				</a>
-
-				<a href="mailto:kontakt@psiakinati.pl" class="footer__mobile-item">
-					<img src="src/img/Ikona (mail).svg" alt="Adres e-mail" class="footer__mobile-item--icon" />
-					<p class="footer__mobile-item--text text-bold">kontakt@psiakinati.pl</p>
-				</a>
-
-				<a href="#" class="footer__mobile-item">
-					<img src="src/img/Ikona (lokacja).svg" alt="Lokalizacja salonu" class="footer__mobile-item--icon local-icon" />
-					<div class="">
-						<span class="footer__mobile-item--text text-bold"> Salon groomerski Psiaki Nati</span>
-						<p class="footer__mobile-item--text">ul. Codzienna 2, 93-323 Łódź</p>
-						<p class="footer__mobile-item--text text-small">Poniedziałek - piątek 8:00 - 16:00</p>
-					</div></a
-				>
-
-				<a href="https://www.facebook.com/profile.php?id=100091150707797" class="footer__mobile-item">
-					<img src="src/img/Ikona (FB).svg" alt="Ikona Facebook" class="footer__mobile-item--icon fb-icon" />
-					<p class="footer__mobile-item--text text-bold fb-text">Psiaki Nati</p>
-				</a>
-			</div>
-
-			<div class="footer__desktop">
-				<a href="#" class="footer__desktop--logo"
-					><img src="src/img/Logo Psiaki-Nati (kwadrat).svg" alt="Logo salonu PsiakiNati" class="footer-logo"
-				/></a>
-
-				<div class="footer__desktop-block">
-					<h3 class="footer__desktop-header">Umów wizytę</h3>
-					<a href="tel:734 196 066" class="footer__desktop-item">
-						<div class="footer__desktop-item--icon">
-							<img src="src/img/Ikona (telefon).svg" alt="Telefon" />
-						</div>
-						<p href="tel:734 196 066" class="footer__desktop-item--text text-bold">734 196 066</p>
-					</a>
-
-					<a href="mailto:kontakt@psiakinati.pl" class="footer__desktop-item">
-						<img src="src/img/Ikona (mail).svg" alt="Adres e-mail" class="footer__desktop-item--icon" />
-						<p class="footer__desktop-item--text text-bold">kontakt@psiakinati.pl</p>
-					</a>
-				</div>
-
-				<div class="footer__desktop-block">
-					<h3 class="footer__desktop-header">Odwiedź salon</h3>
-					<a href="#" class="footer__desktop-item">
-						<img src="src/img/Ikona (lokacja).svg" alt="Lokalizacja salonu" class="footer__desktop-item--icon local-icon" />
-						<div class="">
-							<span class="footer__desktop-item--text text-bold"> Salon groomerski Psiaki Nati</span>
-							<p class="footer__desktop-item--text">ul. Codzienna 2, 93-323 Łódź</p>
-							<p class="footer__desktop-item--text text-small">Poniedziałek - piątek 8:00 - 16:00</p>
-						</div></a
-					>
-				</div>
-
-				<div class="footer__desktop--block">
-					<h3 class="footer__desktop-header">Zaobserwuj</h3>
-					<a href="https://www.facebook.com/profile.php?id=100091150707797" class="footer__desktop-item" target="_blank">
-						<img src="src/img/Ikona (FB).svg" alt="" class="footer__desktop-item--icon fb-icon" />
-						<p class="footer__desktop-item--text text-bold fb-text">Psiaki Nati</p>
-					</a>
-				</div>
-			</div>
-
-			<div class="footer__copy">
-				<p class="footer__copy--text">
-					&copy; <span class="footer__year">2024</span> Wykoananie strony:
-					<a href="https://www.facebook.com/KoOnRaD" target="_blank"><span class="text-bold">Konrad Bączyk</span></a>
-				</p>
-			</div>
-		</footer>
+		<!-- @include footer.kit -->
+		<script src="src/js/script.js"></script>
 	</body>
 </html>
