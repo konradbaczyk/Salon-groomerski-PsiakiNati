@@ -1,0 +1,103 @@
+@use "colors" as *;
+
+.header {
+	&__contact {
+		background-image: url("../img/contact.jpg");
+	}
+}
+
+.contact {
+	&__items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__text {
+		margin-bottom: 3em;
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	&__item {
+		height: 18rem;
+		width: 30rem;
+		margin-bottom: 2em;
+		padding: 2em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: $primary-yellow;
+		border-radius: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&--img {
+			height: 5rem;
+			width: 5rem;
+			margin-bottom: 1em;
+		}
+
+		&--text {
+			font-size: 1.8rem;
+			text-align: center;
+
+			.text-bold {
+				font-size: 2.4rem;
+			}
+		}
+	}
+}
+
+// MEDIA
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+	.contact {
+		&__items {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			gap: 2em;
+		}
+
+		&__item {
+			&:last-child {
+				margin-bottom: 2em;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.contact {
+		&__text {
+			font-size: 2.4rem;
+		}
+
+		&__item {
+			height: 35rem;
+			width: 41rem;
+
+			&--img {
+				height: 7rem;
+				width: 7rem;
+			}
+
+			&--text {
+				font-size: 2.4rem;
+			}
+			.text-bold {
+				margin-top: 0.5em;
+				font-size: 3.6rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1600px) {
+}
