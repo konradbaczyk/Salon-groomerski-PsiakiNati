@@ -283,35 +283,53 @@ body {
 		justify-content: center;
 		text-align: center;
 	}
+
 	&__image {
 		width: 20rem;
 		height: 20rem;
 		border: 1px solid $primary-grey;
 	}
+}
 
-	&__dots {
-		height: fit-content;
-		display: flex;
-		justify-content: center;
-		gap: 1em;
+.swiper-wrapper {
+	overflow-y: visible;
+}
 
-		.active-dot {
-			background-color: $primary-orange;
-		}
-	}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	display: none;
+}
 
-	&__dot {
-		width: 1.7rem;
-		height: 1.7rem;
-		background-color: $stronger-yellow;
-		border-radius: 50%;
-		transition: background-color 0.5s;
+.swiper {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
 
-		&:hover {
-			background-color: $primary-orange;
-			cursor: pointer;
-		}
-	}
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+	bottom: -3em;
+}
+
+.swiper-pagination-bullet {
+	height: 1.2rem;
+	width: 1.2rem;
+	background-color: $stronger-yellow;
+	opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: $primary-orange;
 }
 
 // MAP
