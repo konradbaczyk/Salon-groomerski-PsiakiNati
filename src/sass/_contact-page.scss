@@ -1,12 +1,13 @@
 @use "colors" as *;
 
-.header {
-	&__contact {
-		background-image: url("../img/contact.jpg");
-	}
+.contact-header-img {
+	background-image: url("../img/kontakt-header-small.jpg");
+	background-position: 0 0;
 }
 
 .contact {
+	scroll-margin-top: 82px;
+
 	&__items {
 		display: flex;
 		flex-direction: column;
@@ -53,16 +54,30 @@
 
 // MEDIA
 @media (min-width: 576px) {
+	.contact-header-img {
+		background-image: url("../img/kontakt-header-big.jpg");
+		background-position: 10% 35%;
+		background-size: 130%;
+	}
 }
 
 @media (min-width: 768px) {
+	.contact-header-img {
+		background-position: 40% 35%;
+	}
+
 	.contact {
+		scroll-margin-top: 130px;
 		&__items {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-around;
 			gap: 2em;
+		}
+
+		&__text {
+			font-size: 2rem;
 		}
 
 		&__item {
@@ -73,8 +88,17 @@
 	}
 }
 
+@media (min-width: 992px) {
+	.contact-header-img {
+		background-position: 30% 35%;
+		background-size: 110%;
+	}
+}
+
 @media (min-width: 1200px) {
 	.contact {
+		scroll-margin-top: 140px;
+
 		&__text {
 			font-size: 2.4rem;
 		}
@@ -100,4 +124,14 @@
 }
 
 @media (min-width: 1600px) {
+	.contact-header-img {
+		background-position: 0 35%;
+		background-size: cover;
+	}
+
+	.contact {
+		&__items {
+			flex-wrap: nowrap;
+		}
+	}
 }

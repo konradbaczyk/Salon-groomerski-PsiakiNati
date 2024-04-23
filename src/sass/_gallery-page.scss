@@ -1,0 +1,113 @@
+@use "colors" as *;
+
+.gallery-header-img {
+	background-image: url("../img/realizacje-header-img.jpg");
+}
+
+.gallery {
+	width: 100%;
+
+	&__text {
+		margin-bottom: 2em;
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	&__items {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 0.4em;
+	}
+
+	&__item {
+		max-width: 10rem;
+
+		&--img {
+			width: 100%;
+		}
+
+		&--text {
+			display: none;
+		}
+	}
+}
+
+// MEDIA
+@media (min-width: 576px) {
+	.gallery {
+		&__items {
+			gap: 1.2em;
+		}
+
+		&__item {
+			max-width: 15rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.gallery-header-img {
+		background-position: 0 20%;
+		background-size: 140%;
+	}
+	.gallery {
+		&__text {
+			font-size: 2rem;
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			max-width: 20rem;
+
+			&--text {
+				margin: 0.4em 0;
+				display: block;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.gallery-header-img {
+		background-position: 0 40%;
+	}
+
+	.gallery {
+		&__item {
+			max-width: 25rem;
+
+			&--text {
+				margin: 0.8em 0;
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.gallery {
+		&__text {
+			font-size: 2.4rem;
+		}
+
+		&__item {
+			max-width: 35rem;
+
+			&--text {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1600px) {
+	.gallery {
+		&__items {
+			gap: 2.8em;
+		}
+	}
+}

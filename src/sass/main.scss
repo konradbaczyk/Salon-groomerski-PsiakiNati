@@ -2,6 +2,8 @@
 @use "colors" as *;
 @use "components" as *;
 @use "contact-page" as *;
+@use "gallery-page" as *;
+@use "offer-page" as *;
 
 body {
 	font-family: "Roboto", sans-serif;
@@ -96,6 +98,11 @@ body {
 }
 
 // HEADER
+.main-header-img {
+	background-image: url("../img/piesek.png");
+	background-position: 20% 10%;
+}
+
 .header {
 	height: fit-content;
 	margin-top: 82px;
@@ -107,8 +114,6 @@ body {
 	align-items: center;
 	gap: 3em;
 	text-align: center;
-	background-image: url("../img/piesek.png");
-	background-position: 20% 10%;
 
 	&__heading {
 		width: 80%;
@@ -276,40 +281,27 @@ body {
 .fb {
 	overflow: hidden;
 
-	&__images {
-		margin-bottom: 2em;
-		display: flex;
-		gap: 2em;
-		justify-content: center;
-		text-align: center;
-	}
+	// 	&__images {
+	// 		// margin-bottom: 2em;
+	// 		// display: flex;
+	// 		// gap: 2em;
+	// 		// justify-content: center;
+	// 		// text-align: center;
+	// 	}
 
-	&__image {
-		width: 20rem;
-		height: 20rem;
-		border: 1px solid $primary-grey;
-	}
-}
-
-.swiper-wrapper {
-	overflow-y: visible;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-	display: none;
+	// &__image {
+	// 	width: 20rem;
+	// 	height: 20rem;
+	// 	border: 1px solid $primary-orange;
+	// }
 }
 
 .swiper {
-	width: 100%;
-	height: 100%;
 	overflow: visible;
 }
 
 .swiper-slide {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	max-width: 40rem;
 }
 
 .swiper-slide img {
@@ -611,10 +603,15 @@ body {
 		display: none;
 	}
 
-	.header {
-		margin-top: 101px;
+	.main-header-img {
 		background-position: 0 50%;
 		background-size: cover;
+	}
+
+	.header {
+		margin-top: 101px;
+		// background-position: 0 50%;
+		// background-size: cover;
 		align-items: start;
 
 		&__heading {
@@ -705,16 +702,16 @@ body {
 		}
 	}
 
-	.fb {
-		&__images {
-			margin-bottom: 3em;
-			gap: 2.5em;
-		}
-		&__image {
-			width: 24rem;
-			height: 24rem;
-		}
-	}
+	// .fb {
+	// 	&__images {
+	// 		margin-bottom: 3em;
+	// 		gap: 2.5em;
+	// 	}
+	// 	&__image {
+	// 		width: 24rem;
+	// 		height: 24rem;
+	// 	}
+	// }
 
 	.footer {
 		&__mobile {
@@ -824,8 +821,12 @@ body {
 		}
 	}
 
-	.header {
+	.main-header-img {
 		background-position: 0 40%;
+	}
+
+	.header {
+		// background-position: 0 40%;
 
 		&__heading {
 			font-size: 5.8rem;
@@ -890,16 +891,16 @@ body {
 		}
 	}
 
-	.fb {
-		&__images {
-			margin-bottom: 3.4em;
-			gap: 2.8em;
-		}
-		&__image {
-			width: 26rem;
-			height: 26rem;
-		}
-	}
+	// .fb {
+	// 	&__images {
+	// 		margin-bottom: 3.4em;
+	// 		gap: 2.8em;
+	// 	}
+	// 	&__image {
+	// 		width: 26rem;
+	// 		height: 26rem;
+	// 	}
+	// }
 
 	.footer {
 		&__desktop {
@@ -942,8 +943,12 @@ body {
 }
 
 @media (min-width: 1200px) {
-	.header {
+	.main-header-img {
 		background-position: 0 30%;
+	}
+
+	.header {
+		// background-position: 0 30%;
 
 		&__heading {
 			font-size: 9rem;
@@ -1026,15 +1031,15 @@ body {
 		}
 	}
 
-	.fb {
-		&__images {
-			gap: 3em;
-		}
-		&__image {
-			width: 30rem;
-			height: 30rem;
-		}
-	}
+	// .fb {
+	// 	&__images {
+	// 		gap: 3em;
+	// 	}
+	// 	&__image {
+	// 		width: 30rem;
+	// 		height: 30rem;
+	// 	}
+	// }
 
 	.footer {
 		&__desktop {
@@ -1068,9 +1073,13 @@ body {
 }
 
 @media (min-width: 1400px) {
+	.main-header-img {
+		background-position: 0 40%;
+	}
+
 	.header {
 		height: 68rem;
-		background-position: 0 40%;
+		// background-position: 0 40%;
 	}
 
 	.about-me {
@@ -1093,12 +1102,12 @@ body {
 		}
 	}
 
-	.fb {
-		&__image {
-			width: 40rem;
-			height: 40rem;
-		}
-	}
+	// .fb {
+	// 	&__image {
+	// 		width: 40rem;
+	// 		height: 40rem;
+	// 	}
+	// }
 
 	.map {
 		&__heading {

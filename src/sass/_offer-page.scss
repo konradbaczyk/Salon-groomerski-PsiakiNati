@@ -1,0 +1,29 @@
+@use "colors" as *;
+
+.offer-header-img {
+	background-image: url("../img/oferta-header-img.jpg");
+	background-position: 0 10%;
+	background-size: 160%;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+	.offer-header-img {
+		background-position: 10% 20%;
+		background-size: 120%;
+	}
+}
+
+@media (min-width: 992px) {
+	.offer-header-img {
+		background-size: cover;
+	}
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1600px) {
+}

@@ -32,7 +32,7 @@
 			</div>
 		</nav>
 
-		<header class="header section-padding wrapper">
+		<header class="header main-header-img section-padding wrapper">
 			<h2 class="header__heading">Swojego Psiaka <br />zostaw u mnie!</h2>
 			<div class="header__text">
 				<span>Zapraszam do mojego</span>
@@ -42,7 +42,7 @@
 				</h1>
 			</div>
 			<div class="header__button-box">
-				<a href="#" class="header__cta-button cta-button">Umów wizytę</a>
+				<a href="contact.html#contact" class="header__cta-button cta-button">Umów wizytę</a>
 			</div>
 		</header>
 
@@ -209,8 +209,8 @@
 							/></a>
 						</div>
 					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
+					<!-- <div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div> -->
 					<div class="swiper-pagination"></div>
 				</div>
 			</section>
@@ -231,6 +231,7 @@
 		</main>
 
 		<!-- @include footer.kit -->
+
 		<script src="src/js/script.js"></script>
 
 		<!-- Swiper JS -->
@@ -239,13 +240,25 @@
 		<!-- Initialize Swiper -->
 		<script>
 			var swiper = new Swiper(".mySwiper", {
-				slidesPerView: 2,
-				spaceBetween: 20,
-				centeredSlides: true,
-				loop: true,
+				slidesPerView: 1,
+				spaceBetween: 10,
 				pagination: {
 					el: ".swiper-pagination",
 					clickable: true,
+				},
+				breakpoints: {
+					576: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 40,
+					},
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 50,
+					},
 				},
 			});
 		</script>
