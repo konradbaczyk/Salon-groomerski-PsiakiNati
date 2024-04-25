@@ -1,0 +1,33 @@
+// OFFER SECTION
+@keyframes hideImg {
+	0% {
+		z-index: 10;
+		opacity: 1;
+	}
+
+	50% {
+		z-index: -10;
+		opacity: 0.4;
+	}
+
+	100% {
+		z-index: -10;
+		opacity: 1;
+	}
+}
+
+@keyframes showImg {
+	0% {
+		z-index: -10;
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.4;
+	}
+
+	100% {
+		z-index: 10;
+		opacity: 1;
+	}
+}

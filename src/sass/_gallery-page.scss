@@ -26,6 +26,11 @@
 
 		&--img {
 			width: 100%;
+			transition: scale 0.3s;
+
+			&:hover {
+				scale: 1.3;
+			}
 		}
 
 		&--text {

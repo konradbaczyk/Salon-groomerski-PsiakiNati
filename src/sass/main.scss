@@ -4,6 +4,7 @@
 @use "contact-page" as *;
 @use "gallery-page" as *;
 @use "offer-page" as *;
+@use "animation" as *;
 
 body {
 	font-family: "Roboto", sans-serif;
@@ -255,8 +256,29 @@ body {
 		justify-content: center;
 		align-items: center;
 
+		&--first {
+			z-index: 10;
+			animation: ease-in-out 0.7s showImg forwards;
+		}
+
 		&--second {
-			display: none;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			display: block;
+			z-index: -10;
+			animation: ease-in-out 0.7s hideImg forwards;
+		}
+
+		&:hover &--first {
+			z-index: -10;
+			animation: ease-in-out 0.7s hideImg forwards;
+		}
+
+		&:hover &--second {
+			z-index: 10;
+			animation: ease-in-out 0.7s showImg forwards;
 		}
 	}
 
@@ -864,13 +886,12 @@ body {
 			margin-bottom: 0;
 			justify-content: start;
 			align-items: flex-start;
+			perspective: 500px;
 
 			&--second {
-				position: absolute;
 				left: 10%;
 				top: 15%;
-				display: block;
-				z-index: -10;
+				transform: translateX(0);
 			}
 		}
 
