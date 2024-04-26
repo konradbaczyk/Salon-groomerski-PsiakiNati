@@ -100,7 +100,7 @@ body {
 
 // HEADER
 .main-header-img {
-	background-image: url("../img/piesek.png");
+	background-image: url("../img/main-page-header.jpg");
 	background-position: 20% 10%;
 }
 
@@ -209,14 +209,13 @@ body {
 			overflow: hidden;
 
 			.offer-img {
-				position: absolute;
-				left: -25px;
-				height: 100%;
+				width: 100%;
 			}
 
 			.last-img {
 				position: absolute;
 				left: 0;
+				top: -2em;
 			}
 		}
 

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="235" height="164" viewBox="0 0 235 164">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
   <defs>
     <clipPath id="clip-Ikona_mail_">
-      <rect width="235" height="164"/>
+      <rect width="30" height="30"/>
     </clipPath>
   </defs>
   <g id="Ikona_mail_" data-name="Ikona (mail)" clip-path="url(#clip-Ikona_mail_)">
-    <g id="Ikona_mail_2" data-name="Ikona (mail)" transform="translate(-358 -4098.166)">
-      <path id="Subtraction_7" data-name="Subtraction 7" d="M203.621,164H31.324A31.317,31.317,0,0,1,0,132.766V31.234a31.122,31.122,0,0,1,1.176-8.516l110.219,90.25a11.849,11.849,0,0,0,14.875,0l108.09-88.047A31.356,31.356,0,0,1,235,31.234V132.766A31.343,31.343,0,0,1,203.621,164ZM118.828,88.75l0-.016L15.547,4.234A31.461,31.461,0,0,1,31.324,0h172.3A31.4,31.4,0,0,1,221.2,5.359L118.832,88.734Z" transform="translate(358 4098.167)" fill="#fea234"/>
+    <g id="Ikona_mail_2" data-name="Ikona (mail)" transform="translate(-358 -4093.166)">
+      <path id="Subtraction_7" data-name="Subtraction 7" d="M25.994,21H4a4,4,0,0,1-4-4V4a4,4,0,0,1,.15-1.09l14.07,11.556a1.509,1.509,0,0,0,1.9,0l13.8-11.274A4.027,4.027,0,0,1,30,4V17A4.007,4.007,0,0,1,25.994,21ZM15.17,11.364v0L1.985.542A4.007,4.007,0,0,1,4,0h22a4,4,0,0,1,2.244.686L15.17,11.362Z" transform="translate(358 4098.167)" fill="#fea234"/>
     </g>
   </g>
 </svg>
