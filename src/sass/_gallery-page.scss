@@ -29,7 +29,7 @@
 			transition: scale 0.3s;
 
 			&:hover {
-				scale: 1.3;
+				scale: 1.6;
 			}
 		}
 
@@ -84,6 +84,12 @@
 	.gallery {
 		&__item {
 			max-width: 25rem;
+
+			&--img {
+				&:hover {
+					scale: 1.3;
+				}
+			}
 
 			&--text {
 				margin: 0.8em 0;
