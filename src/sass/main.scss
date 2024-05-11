@@ -10,6 +10,34 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
+// COOKIE ALERT
+.cookie-box {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.3em;
+	font-size: 1rem;
+	text-align: center;
+	background-color: $cookie-alert-bg;
+
+	z-index: 200;
+
+	&__btn {
+		margin: 0.2em 1em;
+		border-radius: 25px;
+
+		&--reject {
+			padding: 0 0.2em;
+			background-color: rgb(255, 134, 134);
+		}
+		&--accept {
+			padding: 0.4em;
+			background-color: rgb(62, 252, 62);
+		}
+	}
+}
+
 // NAVIGATION
 
 .nav-top {
@@ -301,20 +329,6 @@ body {
 // FB SECTION
 .fb {
 	overflow: hidden;
-
-	// 	&__images {
-	// 		// margin-bottom: 2em;
-	// 		// display: flex;
-	// 		// gap: 2em;
-	// 		// justify-content: center;
-	// 		// text-align: center;
-	// 	}
-
-	// &__image {
-	// 	width: 20rem;
-	// 	height: 20rem;
-	// 	border: 1px solid $primary-orange;
-	// }
 }
 
 .swiper {
@@ -963,6 +977,13 @@ body {
 }
 
 @media (min-width: 1200px) {
+	.cookie-box {
+		font-size: 2rem;
+
+		&__btn {
+			font-size: 2rem;
+		}
+	}
 	.main-header-img {
 		background-position: 0 30%;
 	}
