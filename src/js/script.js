@@ -1,5 +1,6 @@
 const navigationBottomBar = document.querySelector(".nav-bottom");
 const mobileNavBtn = document.querySelector(".burger-btn");
+const mobileNavBars = document.querySelector(".burger-btn__bars");
 const mobileNavItems = document.querySelector(".nav-bottom__items");
 
 const cookieBox = document.querySelector(".cookie-box");
@@ -7,8 +8,11 @@ const cookieBtnReject = document.querySelector(".cookie-box__btn--reject");
 const cookieBtnAccept = document.querySelector(".cookie-box__btn--accept");
 const mapSection = document.querySelector(".map");
 
+const footerYear = document.querySelector(".footer__year");
+
 const showMobileNav = () => {
 	mobileNavItems.classList.toggle("nav-bottom__items--active");
+	mobileNavBars.classList.toggle("burger-btn__bars--active");
 };
 
 const showCookie = () => {
@@ -39,6 +43,7 @@ const checkCookies = () => {
 	}
 };
 
+footerYear.textContent = new Date().getFullYear();
 mobileNavBtn.addEventListener("click", showMobileNav);
 cookieBtnAccept.addEventListener("click", acceptCookie);
 cookieBtnReject.addEventListener("click", rejectCookie);
